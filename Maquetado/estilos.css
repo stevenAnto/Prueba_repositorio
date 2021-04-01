@@ -1,0 +1,110 @@
+* {
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+}
+html {
+    background: url("./Prueba/assets/fondo.jpeg") no-repeat center center fixed ;
+    background-size: cover;
+    
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    opacity: 0.65;
+    display: flex;
+    justify-content: space-between;
+  }
+#logo {
+    margin: 10px;
+    height: 35px;
+    width: 40px;
+}
+nav{
+    margin-top: 20px;
+    margin-right: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    padding: 5px;
+}
+main {
+    text-align: center;
+}
+#foto {
+    margin-top: 100px;
+    border-radius: 48%;
+    width: 200px;
+    border: 5px solid white
+}
+#nombre {
+    margin-bottom: 30px;
+    color: black;
+    font-size:x-large
+}
+#botones {
+    margin: 10px;
+}
+button {
+    border-radius: 10px;
+    border : 2px solid black;
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+
+}
+#parrafo {
+    font-size: large;
+    color :black;
+    margin: 100px;
+    padding: 30px;
+    border-radius: 20px;
+    justify-content: center;
+    background-color: white;
+    box-sizing: border-box;
+    opacity: 80%;
+
+}
+#waves {
+    width: 100%;
+    left: 0;
+    margin-bottom: -4px;
+  }
+footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFBFF;
+    opacity: 60%;
+  }
+  
+  .texto-footer {
+    font-size: medium;
+    color: black;
+  }
+  .sub-footer {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  #sub-footer-3 {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .red-social {
+    width: 30px;
+    margin: 10px;
+  } 
