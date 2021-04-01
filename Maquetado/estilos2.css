@@ -5,7 +5,9 @@ header {
     display: flex;
     justify-content: space-between;
     padding-bottom: 60px;
+    margin-bottom: 10px;
     padding-top: 20px;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(1,80,120,0.16850490196078427) 56%, rgba(#006496) 100%);
     
 }
 p{
@@ -33,10 +35,11 @@ main{
     padding-top: -20px;
     /* text-align: center; */
     height: 900px;
-    background-blend-mode: overlay;
-    background-image: url(./assets/home-bg.jpg),linear-gradient(
+    /* background-blend-mode: overlay; */
+    background-image: url(./assets/home-image.jpg);
+    /* linear-gradient(
 190deg
-,#772621 0%,#d7524a 100%)!important;
+,#772621 0%,#d7524a 100%)!important; */
     background-repeat: no-repeat;
     background-size: 100% 90% ;    display: flex;
     flex-direction: column;
