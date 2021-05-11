@@ -1,12 +1,12 @@
 import React from 'react'
 import logo from "../../assets/logotipo/logo2.png"
 import {Link,useHistory} from "react-router-dom"
-
+import "./NavBar.css"
 
 //......navbar...........
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-
+import {Box,Container,Grid, Typography} from '@material-ui/core'
 
 
 import { ThemeProvider } from '@material-ui/styles';
@@ -33,56 +33,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 
 
+import { motion } from "framer-motion"
 
-//.........Buscador...........................................
-const useStyles = makeStyles((buscar)=>({
-  root: {
-   
-    
-  },
-  
-  search: {
-    position: 'relative',
-    borderRadius: buscar.shape.borderRadius,
-    backgroundColor: fade(buscar.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: fade(buscar.palette.common.white, 0.25),
-    },
-     
-    marginLeft: 0,
-    width: '100%',
-    [buscar.breakpoints.up('sm')]: {
-      marginLeft: buscar.spacing(1),
-      width: 'auto',
-    },
-  },
-      searchIcon: {
-        padding: buscar.spacing(0, 2),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      },
-      
-      inputRoot: {
-        color: 'inherit',
-      },
-      inputInput: {
-        padding: buscar.spacing(1, 1, 1, 0),
-       
-        paddingLeft: `calc(1em + ${buscar.spacing(4)}px)`,
-        transition: buscar.transitions.create('width'),
-        width: '100%',
-        [buscar.breakpoints.up('sm')]: {
-          width: '12ch',
-          '&:focus': {
-            width: '20ch',
-          },
-        },
-      },
-    }));
 //..............................................................................
 //.............................................................................
 
@@ -127,46 +79,327 @@ const useStyles = makeStyles((buscar)=>({
 
 
 
- //...........boton iniciar secion
-   const useStyles1 = makeStyles((boton) => ({
-    boot: {
-      '& > *': {
-        margin: boton.spacing(1.5),
-      },
-    },
-  }));
-//...................................................
-//......................................................
+ //...........RESPONSIVE.......................................
+ //......................................................
+
+   const useStyles = makeStyles((Responsive) => ({
+
+    offf: Responsive.mixins.toolbar,
 
 
+//...........LOGO.....................
 
-//.............Estilos.........................................
-  const useStyles2 = makeStyles({
-    pestanas: {
-      flexGrow:1,
-      margin:10,
-
-    },
-   menu: {
-      padding:4,
-    margin:13,
-  
-    },
-
-   obras: {
-      marginLeft:110,  
-      
-    },
-
-    logo: {
+    logo:{
+      [Responsive.breakpoints.up("xs")]: {
+        width: 43,
+        position:"relative",
+        margin: Responsive.spacing(-2),
+        marginBottom:-6,
         
-    marginRight:10,
+       },
+     [Responsive.breakpoints.up("sm")]: {
+      width: 60,
+      position:"relative",
+      margin: Responsive.spacing(-3),
+      fontSize: 15,
+       margin:5,
+     },
+     
+     [Responsive.breakpoints.up("md")]: {
+      width: 70,
+      position:"relative",
+      fontSize: 20,
+      margin:5,
+      
+     },
+     [Responsive.breakpoints.up("lg")]: {
+       width: 90,
+       position:"relative",
+       fontSize: 30,
+       margin:5,
+     },
+
+     
+  },
+
+//...........OBRAS PUBLICAS................
+
+  obras:{
+    [Responsive.breakpoints.up("xs")]: {
+      fontSize: 9,
+      width:90,
+      margin: Responsive.spacing(1),
     
+     },
+   [Responsive.breakpoints.up("sm")]: {
+   
+   
+    
+    fontSize: 12,
+    width:120,
+    margin: Responsive.spacing(2),
+    
+   },
+   
+   [Responsive.breakpoints.up("md")]: {
+    
+    
+    fontSize: 20,
+    width:160,
+    margin: Responsive.spacing(3),
+    
+   },
+   [Responsive.breakpoints.up("lg")]: {
+     
+     
+     fontSize: 43,
+     width: 400,
+     
+    
+     },
+
+   },
+
+
+
+//...........PESTAÑAS ...............
+
+
+
+
+tabs:{
+
+  [Responsive.breakpoints.up("xs")]: {
+    width: 125,
+    height:30,
+    
+   },
+ [Responsive.breakpoints.up("sm")]: {
+  width: 250,
+  fontSize: 11,
   
-    },
-  });
+ },
+ 
+ [Responsive.breakpoints.up("md")]: {
+  width: 350,
   
-//...................................................................
+  
+ },
+ [Responsive.breakpoints.up("lg")]: {
+   width: 490,
+   height:50,
+  
+ },
+
+},
+
+
+
+
+
+//............INICIO..................
+
+inicio:{
+
+  [Responsive.breakpoints.up("xs")]: {
+    
+    marginRight:-20,
+    marginTop:-6,
+   
+    fontSize: 7,
+   },
+ [Responsive.breakpoints.up("sm")]: {
+  width: 60,
+  fontSize: 11,
+  
+  
+  
+ },
+ 
+ [Responsive.breakpoints.up("md")]: {
+  width: 70,
+  
+  
+ },
+ [Responsive.breakpoints.up("lg")]: {
+   width: 90,
+   fontSize: 17,
+  
+  
+ },
+ [Responsive.breakpoints.up("xl")]: {
+  width: 90,
+  fontSize: 17,
+  
+ 
+ 
+},
+
+},
+
+
+
+//.....BOTON MODULOS......................
+
+busqueda:{
+
+  [Responsive.breakpoints.up("xs")]: {
+    fontSize: 7,
+    width:20,
+    height:30,
+   },
+ [Responsive.breakpoints.up("sm")]: {
+   
+   fontSize: 8.5,
+ 
+   
+  
+ },
+ 
+ [Responsive.breakpoints.up("md")]: {
+  width:100,
+  
+  
+ },
+ [Responsive.breakpoints.up("lg")]: {
+  width:150,
+  height:48,
+  fontSize: 14,
+  
+ },
+
+},
+
+
+
+
+//......... ACERCA................
+
+acerca:{
+
+  [Responsive.breakpoints.up("xs")]: {
+    width: 30,
+    marginLeft:-20,
+    marginTop:-6,
+    fontSize: 7,
+   },
+ [Responsive.breakpoints.up("sm")]: {
+  width: 60,
+  fontSize: 11,
+  
+  
+  
+ },
+ 
+ [Responsive.breakpoints.up("md")]: {
+  width: 70,
+  
+  
+ },
+ [Responsive.breakpoints.up("lg")]: {
+   width: 80,
+   fontSize: 17,
+  
+  
+ },
+ [Responsive.breakpoints.up("xl")]: {
+  width: 90,
+  fontSize: 17,
+  
+ 
+ 
+},
+
+},
+
+
+
+
+
+
+//...........BOTON INICIAR SECION.......
+iniciarSecion: {
+  [Responsive.breakpoints.up("xs")]: {
+  width: 10,
+  height:25,
+  fontSize: 7,
+  marginLeft:2,
+  marginBottom:1,
+
+  
+  },
+[Responsive.breakpoints.up("sm")]: {
+width: 100,
+
+
+fontSize: 8,
+marginLeft:15,
+marginBottom:1,
+},
+
+[Responsive.breakpoints.up("md")]: {
+width: 130,
+marginLeft:30,
+fontSize: 12,
+
+
+},
+[Responsive.breakpoints.up("lg")]: {
+ width: 180,
+height:45,
+ fontSize: 17,
+ marginLeft:45,
+ 
+ 
+},
+[Responsive.breakpoints.up("xl")]: {
+width: 300,
+
+fontSize: 20,
+marginLeft:140,
+
+},
+},
+
+
+
+
+//..........REGISTRAR........................
+
+registrar:{
+
+  [Responsive.breakpoints.up("xs")]: {
+    fontSize: 6.5,
+    width:5,
+    marginLeft:8,
+   },
+ [Responsive.breakpoints.up("sm")]: {
+  width:70,
+   fontSize: 8.5,
+ 
+   
+  
+ },
+ 
+ [Responsive.breakpoints.up("md")]: {
+  width:100,
+  fontSize: 12,
+  
+ },
+ [Responsive.breakpoints.up("lg")]: {
+  width: 180,
+  marginLeft:10,
+  fontSize: 17,
+  
+  margin: Responsive.spacing(4),
+ },
+
+},
+
+
+
+}));
+
   
 
 //.........................................
@@ -179,6 +412,8 @@ const NavBar = () => {
 
   //.   varibales...buscador...............................
    const classes = useStyles();
+
+
     const [value, setValue] = React.useState(0);
   
     const handleChange = (event, newValue) => {
@@ -200,34 +435,67 @@ const [anchorEl, setAnchorEl] = React.useState(null);
 //...................................
 
 
-     const clase1 = useStyles1();
-
-     const clase2 = useStyles2();
-
+    
+  
 
    
-   
+
+
+
+
+
+
     return (
 
 
-      <div className={clase2.menu}>
-    <AppBar position="static" style={{background: 'linear-gradient(#0063b1,white'}}>
-         <Toolbar >
-         <ThemeProvider >
-             <img className={clase2.logo} src={logo} alt="logo" style={{width:90}}/>
-             <h1 className={clase2.obras}>OBRAS PUBLICAS</h1>
+
+  <motion.div
+  
+  animate={{
+    transition: { duration: 1.5 },
+    scale: [1, 2, 2, 1, 1],
+    
+  }}
+  
+  
+  >
+
+     <Grid container >
+    <AppBar  style={{background: 'linear-gradient(#0063b1,white'}}>
+         <Toolbar  className={classes.offf}>
+
+
+         <Grid item xs={1}>
+         <Box >
+           
+          
+             <img className={classes.logo}    src={logo} alt="logo"/>
             
-      <Paper className={clase2.pestanas}>
+            </Box>
+           </Grid>
+            <div  >
+           <Grid item xs={3} >
+             <Box   >
+             <Typography className={classes.obras}>
+                    OBRAS PUBLICAS
+             </Typography>
+            </Box>
+             </Grid>
+           </div>
+             <Grid item xs={4}>    
+      <Paper className={classes.tabs}>
       <Tabs
+      
         value={value} 
         onChange={handleChange}
         indicatorColor="primary"
         textColor="primary"
         centered
       >
-        <Tab label="INICIO" onClick={()=>history.push("/")} />
+        <Tab className={classes.inicio} label="INICIO" onClick={()=>history.push("/")} />
     
         <Button
+        className={classes.busqueda}
         aria-controls="customized-menu"
         aria-haspopup="true"
         variant="contained"
@@ -298,43 +566,45 @@ const [anchorEl, setAnchorEl] = React.useState(null);
 
 
 
-        <Tab label="ACERCA" />
+        <Tab className={classes.acerca} label="ACERCA" />
       </Tabs>
     </Paper>
 
+    </Grid>
+           
 
-             </ThemeProvider>
-             <div className={classes.root} >
-        
-             <div className={classes.search}  >
-            <div className={classes.searchIcon} >
-                 <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-             
-              </div>
-              </div>
-               <div className={clase1.boot}>
-              <Button variant="contained" color="primary" onClick={()=> history.push("/Login")}>
+              <Grid item xs={2} >  
+               <motion.div
+               whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
+               
+               >
+
+               <Box >
+              <Button className={classes.iniciarSecion} variant="contained" color="primary" onClick={()=> history.push("/Login")}>
                Iniciar Sesion
              </Button>
-             
-              </div>
-             
-              
-              <Button variant="outlined" style={{color:"white"}} onClick={()=> history.push("/Registro")}>Registrarse</Button>
+             </Box>
+              </motion.div>
+              </Grid>
+
+              <Grid item xs={2}>  
+              <motion.div
+               whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
+               
+               >
+              <Box>
+              <Button className={classes.registrar} variant="outlined" style={{color:"white" }} onClick={()=> history.push("/Registro")}>Registrarse</Button>
+              </Box>
+
+              </motion.div>
+              </Grid>
+            
          </Toolbar>
       </AppBar>
-
-      </div>
-
+   
+ </Grid>
+   <div className={classes.offf}></div>
+</motion.div>
 
     );
 }

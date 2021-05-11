@@ -5,10 +5,10 @@ body {
     overflow: hidden;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    
    background-image: url("home-image.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
 
   }
   
@@ -23,7 +23,7 @@ body {
   
   .next,
   .prev {
-    top: calc(40% - 20px);
+    
     position: absolute;
     background: #0063b1;
    border:solid;
@@ -40,23 +40,102 @@ body {
     z-index: 2;
   }
   
-  .next {
-    right: 390px;
-    transform: scale(2);
-  }
   
-  .prev {
-    left: 390px;
-    transform: scale(2);
+  
+  
+  @media only screen and (max-width: 600px){
+    img{
+       width: 250px;
+    
+      }
+
+      .next {
+        right: 72px;
+        transform: scale(1);
+      }
+      
+      .prev {
+        left: 72px;
+        transform: scale(1);
+       
+      }
+}
+
+/*pantallas pequeñas(tablets en modo portai(vertical) y celulares grandes o sea que tienen un ancho mayor a 600px)*/
+@media only screen and (min-width: 600px){
+    img{
+      width: 350px;
    
-  }
-  
-  img {
-    position: absolute;
-    max-width: 100vw;
-    max-height: 100vh;
-  }
-  
+      }
+      .next {
+        right: 80px;
+        transform: scale(1);
+      }
+      
+      .prev {
+        left: 80px;
+        transform: scale(1);
+       
+      }
+}
+
+/*pantallas de tamaño medio(tablerts en modo landscape(horizontal), o sea que teiene un ancho mayor o igual a 768px*/
+@media only screen and (min-width:768px){
+  img{
+    width: 400px;
+ 
+    }
+    .next {
+      right: 170px;
+      transform: scale(1);
+    }
+    
+    .prev {
+      left: 170px;
+      transform: scale(1);
+     
+    }
+}
+/*pantallas grandes(laptop/compu de escritorio o que tiene un ancho mayot a 992px)*/
+@media only screen and (min-width:992px){
+  img{
+    width: 450px;
+ 
+    }
+    .next {
+      right:270px;
+      transform: scale(2);
+    }
+    
+    .prev {
+      left: 270px;
+      transform: scale(2);
+     
+    }
+}
+
+/*pantallas muy grnades(laptos gamer monitores extra grandes, que tienen un ancho  mayor o igual 1200px)*/
+@media only screen and (min-width:1200px){
+  img{
+    width: 550px;
+ 
+    }
+    .next {
+      right: 430px;
+      transform: scale(2);
+    }
+    
+    .prev {
+      left: 430px;
+      transform: scale(2);
+     
+    }
+
+}
+
+
+
+
   .refresh {
     padding: 10px;
     position: absolute;

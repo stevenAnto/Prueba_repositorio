@@ -16,7 +16,7 @@ import {
   Route
 } from "react-router-dom";
 import Login from "./componentes/Login/Login"
-import { Divider } from "@material-ui/core";
+
 
 
 const App = () => {
@@ -26,8 +26,8 @@ const App = () => {
      <Router>
        <NavBar/>
 
+       
        <div className="example-container">
-
            <Switch>
         
          
@@ -81,8 +81,8 @@ const App = () => {
          
 
         </Switch>
- </div>
 
+ </div>
     </Router>
     
   )

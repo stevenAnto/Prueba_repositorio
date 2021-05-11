@@ -2,13 +2,26 @@
 
 import NavigateNextSharpIcon from '@material-ui/icons/NavigateNextSharp';
 import NavigateBeforeSharpIcon from '@material-ui/icons/NavigateBeforeSharp';
+import {Box,Container,Grid, Typography} from '@material-ui/core'
+
+
 
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion"
 import { wrap } from "popmotion";
 import { images } from "../../assets/fondo/image";
 import { useState } from "react";
+import {makeStyles } from '@material-ui/core/styles';
+
 import "./imagen.css"
+
+
+
+
+
+
+
+
 
 
 const variants = {
@@ -42,6 +55,20 @@ const swipePower = (offset: number, velocity: number) => {
   
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const Imagen = () => {
 
 const [[page, direction], setPage] = useState([0, 0]);
@@ -55,12 +82,30 @@ const [[page, direction], setPage] = useState([0, 0]);
   };
 
 
-
+   
 
     return (
       <>
-      <AnimatePresence initial={false} custom={direction}>
+         
+
+
+
+    
+    <NavigateNextSharpIcon className="next" style={{color:"white"}} onClick={() => paginate(1)}>
+     
+     </NavigateNextSharpIcon>
+    
+      <AnimatePresence initial={false} custom={direction} >
+
+
+      
+
+
+
+     
+      
         <motion.img
+          
           key={page}
           src={images[imageIndex]}
           custom={direction}
@@ -85,21 +130,23 @@ const [[page, direction], setPage] = useState([0, 0]);
             }
           }}
         />
+        
+      
       </AnimatePresence>
 
+      <NavigateBeforeSharpIcon className="prev" style={{color:"white"}} onClick={() => paginate(-1)}>
+
+</NavigateBeforeSharpIcon>
 
 
-       
-      <NavigateNextSharpIcon className="next" style={{color:"white"}} onClick={() => paginate(1)}>
-     
-      </NavigateNextSharpIcon>
 
-      <NavigateBeforeSharpIcon className="prev" style={{color:"white"}} onClick={() => paginate(1)}>
+ 
 
-      </NavigateBeforeSharpIcon>
+
       
+
       
-    </>
+      </>
       
     )
 }
