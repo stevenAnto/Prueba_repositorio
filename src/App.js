@@ -138,7 +138,7 @@ function App(props) {
                 <ListItemText style={{color:"white"}} primary={"Usuarios"} />
               </ListItem>
             </Link>
-            <Link to="/about" className={classes.link}>
+            <Link to="/Proyectos" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                   <CardTravelIcon></CardTravelIcon>
@@ -146,7 +146,7 @@ function App(props) {
                 <ListItemText style={{color:"white"}} primary={"Proyectos"} />
               </ListItem>
             </Link>
-            <Link to="/about" className={classes.link}>
+            <Link to="/Presupuestos" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                   <AttachMoneyIcon></AttachMoneyIcon>
@@ -154,7 +154,7 @@ function App(props) {
                 <ListItemText style={{color:"white"}} primary={"Presupuesto"} />
               </ListItem>
             </Link>
-            <Link to="/about" className={classes.link}>
+            <Link to="/Programacion" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
                   <DateRangeIcon></DateRangeIcon>
@@ -316,26 +316,127 @@ function App(props) {
               <Typography variant="body1" gutterBottom></Typography>
             </Container>
           </Route>
-          <Route exact path="/about">
-            <Container>
-              <Typography variant="h3" gutterBottom>
-                About
-              </Typography>
-              <Typography variant="body1" gutterBottom>
-                Contrary to popular belief, Lorem Ipsum is not simply random
-                text. It has roots in a piece of classical Latin literature from
-                45 BC, making it over 2000 years old. Richard McClintock, a
-                Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in
-                classical literature, discovered the undoubtable source. Lorem
-                Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
-                written in 45 BC. This book is a treatise on the theory of
-                ethics, very popular during the Renaissance. The first line of
-                Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line
-                in section 1.10.32.
-              </Typography>
+          <Route exact path="/Proyectos">
+          <Container>
+              <div style={{ marginTop: 80 }} className={classes.root}>
+                <Typography variant="h4" gutterBottom>
+                  DATOS DE PROYECTO
+                </Typography>
+                <div style={{ margin: 8, flexDirection: "column" }}>
+                  <TextField
+                    id="standard-basics"
+                    label="Codigo Único"
+                    style={{ margin: 8,backgroundColor:"white" }}
+                    placeholder="ingrese codigo"
+                    //margin="normal"
+                    InputLabelProps={
+                      {
+                        //shrink: true,
+                      }
+                    }
+                  />
+                  <button style={{ margin: 20 }}>
+                    <SearchIcon></SearchIcon>
+                  </button>
+                </div>
+
+                <div style={{ margin: 8, flexDirection: "column" }}>
+                  <TextField
+                    label="Proyecto"
+                    id="outlined-margin-none"
+                    placeholder="ingrese nombre de proyecto"
+                    className={classes.textField}
+                    style={{ margin: 8,backgroundColor:"white" }}
+                    variant="outlined"
+                   
+                  />
+             
+                </div>
+                <div style={{ margin: 8, flexDirection: "column" }}>
+                  <TextField
+                    label="Unidad Ejecutora"
+                    id="outlined-margin-none"
+                    placeholder="ingrese unidad ejecutora"
+                    style={{ margin: 8,backgroundColor:"white" }}
+                    className={classes.textField}
+                    variant="outlined"
+                  />
+                </div>
+                <div style={{ margin: 8, flexDirection: "column" }}>
+                  <TextField
+                    label="Sector"
+                    id="outlined-margin-none"
+                    className={classes.textField}
+                    style={{ margin: 8,backgroundColor:"white" }}
+                    variant="outlined"
+                   
+                  />
+                </div>
+                <Typography variant="h4" gutterBottom>
+                  Meta
+                </Typography>
+                <div style={{ margin: 8, flexDirection: "column" }}>
+                  <TextField
+                    label="Teléfono"
+                    id="outlined-margin-none"
+                    className={classes.textField}
+                    style={{ margin: 8,backgroundColor:"white" }}
+                    variant="outlined"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <PhoneIcon></PhoneIcon>
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </div>
+                <div style={{ margin: 8, flexDirection: "column" }}>
+                  <TextField
+                    label="Fotografía"
+                    id="outlined-size-small"
+                    type="File"
+                    className={classes.textField}
+                    style={{ margin: 8,backgroundColor:"white" }}
+                    variant="outlined"
+                    InputProps={{
+                      startAdornment: (
+                        <InputAdornment position="start">
+                          <PhotoLibraryIcon></PhotoLibraryIcon>
+                        </InputAdornment>
+                      ),
+                    }}
+                  />
+                </div>
+                <div style={{ margin: 8, flexDirection: "column" }}>
+                  <TextField
+                    id="outlined-size-small"
+                    select
+                    label="Tipo de Usuario"
+                    value={tipousuario}
+                    style={{ margin: 8,backgroundColor:"white" }}
+                    onChange={handleChange}
+                    helperText="Elija su tipo de usuario"
+                  >
+                    {tipousuario.map((option) => (
+                      <MenuItem key={option.value} value={option.value}>
+                        {option.label}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                </div>
+                <div>
+                  <button style={{ marginLeft:15,width:100, backgroundColor:"#3146ff" }}>
+                    <SaveIcon></SaveIcon>  
+                   
+                  </button>
+
+                </div>
+                 
+               
+              </div>
+
+              <Typography variant="body1" gutterBottom></Typography>
             </Container>
           </Route>
         </Switch>
