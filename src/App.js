@@ -135,7 +135,7 @@ function App(props) {
                 <ListItemIcon>
                   <PersonIcon></PersonIcon>
                 </ListItemIcon>
-                <ListItemText primary={"Usuarios"} />
+                <ListItemText style={{color:"white"}} primary={"Usuarios"} />
               </ListItem>
             </Link>
             <Link to="/about" className={classes.link}>
@@ -143,7 +143,7 @@ function App(props) {
                 <ListItemIcon>
                   <CardTravelIcon></CardTravelIcon>
                 </ListItemIcon>
-                <ListItemText primary={"Proyectos"} />
+                <ListItemText style={{color:"white"}} primary={"Proyectos"} />
               </ListItem>
             </Link>
             <Link to="/about" className={classes.link}>
@@ -151,7 +151,7 @@ function App(props) {
                 <ListItemIcon>
                   <AttachMoneyIcon></AttachMoneyIcon>
                 </ListItemIcon>
-                <ListItemText primary={"Presupuesto"} />
+                <ListItemText style={{color:"white"}} primary={"Presupuesto"} />
               </ListItem>
             </Link>
             <Link to="/about" className={classes.link}>
@@ -159,7 +159,7 @@ function App(props) {
                 <ListItemIcon>
                   <DateRangeIcon></DateRangeIcon>
                 </ListItemIcon>
-                <ListItemText primary={"Programación"} />
+                <ListItemText style={{color:"white"}} primary={"Programación"} />
               </ListItem>
             </Link>
           </List>
@@ -172,11 +172,11 @@ function App(props) {
                 <Typography variant="h4" gutterBottom>
                   DATOS DE USUARIO
                 </Typography>
-                <div>
+                <div style={{ margin: 8, flexDirection: "column" }}>
                   <TextField
                     id="standard-basics"
                     label="DNI"
-                    style={{ margin: 8 }}
+                    style={{ margin: 8,backgroundColor:"white" }}
                     placeholder="ingrese DNI"
                     //margin="normal"
                     InputLabelProps={
@@ -190,11 +190,12 @@ function App(props) {
                   </button>
                 </div>
 
-                <div style={{ margin: 8 }}>
+                <div style={{ margin: 8, flexDirection: "column" }}>
                   <TextField
                     label="Nombres"
                     id="outlined-margin-none"
                     className={classes.textField}
+                    style={{ margin: 8,backgroundColor:"white" }}
                     variant="outlined"
                     InputProps={{
                       startAdornment: (
@@ -207,12 +208,14 @@ function App(props) {
                   <TextField
                     label="Apellido Paterno"
                     id="outlined-margin-none"
+                    style={{ margin: 8,backgroundColor:"white" }}
                     className={classes.textField}
                     variant="outlined"
                   />
                   <TextField
                     label="Apellido Materno"
                     id="outlined-margin-none"
+                    style={{ margin: 8,backgroundColor:"white" }}
                     className={classes.textField}
                     variant="outlined"
                   />
@@ -221,6 +224,7 @@ function App(props) {
                   <TextField
                     label="e-mail"
                     id="outlined-margin-none"
+                    style={{ margin: 8,backgroundColor:"white" }}
                     className={classes.textField}
                     variant="outlined"
                     InputProps={{
@@ -237,6 +241,7 @@ function App(props) {
                     label="Colegiatura"
                     id="outlined-margin-none"
                     className={classes.textField}
+                    style={{ margin: 8,backgroundColor:"white" }}
                     variant="outlined"
                     InputProps={{
                       startAdornment: (
@@ -252,6 +257,7 @@ function App(props) {
                     label="Teléfono"
                     id="outlined-margin-none"
                     className={classes.textField}
+                    style={{ margin: 8,backgroundColor:"white" }}
                     variant="outlined"
                     InputProps={{
                       startAdornment: (
@@ -268,6 +274,7 @@ function App(props) {
                     id="outlined-size-small"
                     type="File"
                     className={classes.textField}
+                    style={{ margin: 8,backgroundColor:"white" }}
                     variant="outlined"
                     InputProps={{
                       startAdornment: (
@@ -284,6 +291,7 @@ function App(props) {
                     select
                     label="Tipo de Usuario"
                     value={tipousuario}
+                    style={{ margin: 8,backgroundColor:"white" }}
                     onChange={handleChange}
                     helperText="Elija su tipo de usuario"
                   >
@@ -294,10 +302,14 @@ function App(props) {
                     ))}
                   </TextField>
                 </div>
-                <button style={{ margin:8,width:50, backgroundColor:"gray" }}>
+                <div>
+                  <button style={{ marginLeft:15,width:100, backgroundColor:"#3146ff" }}>
                     <SaveIcon></SaveIcon>  
                    
                   </button>
+
+                </div>
+                 
                
               </div>
 

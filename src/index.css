@@ -5,8 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(155,211,224);
-background: linear-gradient(93deg, rgba(155,211,224,0.8723897911832946) 0%, rgba(80,155,242,1) 85%);
+ /*  background: rgb(155,211,224); */
+  background-image: url('https://images.pexels.com/photos/221047/pexels-photo-221047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+/* background: linear-gradient(93deg, rgba(155,211,224,0.8723897911832946) 0%, rgba(80,155,242,1) 85%); */
+
 }
 
 code {
