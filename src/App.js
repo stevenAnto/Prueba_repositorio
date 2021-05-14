@@ -11,8 +11,12 @@ import Toolbar from '@material-ui/core/Toolbar';
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 import MenuItem from "@material-ui/core/MenuItem";
 import Button from '@material-ui/core/Button';
+import SaveIcon from '@material-ui/icons/Save';
+import DateRangeIcon from '@material-ui/icons/DateRange';
 import IconButton from '@material-ui/core/IconButton';
+import CardTravelIcon from '@material-ui/icons/CardTravel';
 import MenuIcon from '@material-ui/icons/Menu';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import Input from "@material-ui/core/Input";
 import InputLabel from "@material-ui/core/InputLabel";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -56,7 +60,7 @@ const drawerWidth = "inherit";
 const useStyles = makeStyles((theme) => ({
   
   drawerPaper: { 
-    width: "inherit", backgroundColor: "#92a8d1" },
+    width: "inherit", backgroundColor: "#5b5b5c" },
   appBar: {
       [theme.breakpoints.up('sm')]: {
         width: `calc(100% - ${drawerWidth}px)`,
@@ -129,7 +133,7 @@ function App(props) {
             <Link to="/" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
-                  <HomeIcon />
+                  <PersonIcon></PersonIcon>
                 </ListItemIcon>
                 <ListItemText primary={"Usuarios"} />
               </ListItem>
@@ -137,7 +141,7 @@ function App(props) {
             <Link to="/about" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
-                  <InfoIcon />
+                  <CardTravelIcon></CardTravelIcon>
                 </ListItemIcon>
                 <ListItemText primary={"Proyectos"} />
               </ListItem>
@@ -145,7 +149,7 @@ function App(props) {
             <Link to="/about" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
-                  <InfoIcon />
+                  <AttachMoneyIcon></AttachMoneyIcon>
                 </ListItemIcon>
                 <ListItemText primary={"Presupuesto"} />
               </ListItem>
@@ -153,7 +157,7 @@ function App(props) {
             <Link to="/about" className={classes.link}>
               <ListItem button>
                 <ListItemIcon>
-                  <InfoIcon />
+                  <DateRangeIcon></DateRangeIcon>
                 </ListItemIcon>
                 <ListItemText primary={"Programación"} />
               </ListItem>
@@ -290,22 +294,11 @@ function App(props) {
                     ))}
                   </TextField>
                 </div>
-                <div style={{ margin: 8, flexDirection: "column" }}>
-                  <TextField
-                    id="outlined-size-small"
-                    select
-                    label="Tipo de Usuario"
-                    value={tipousuario}
-                    onChange={handleChange}
-                    helperText="Elija su tipo de usuario"
-                  >
-                    {tipousuario.map((option) => (
-                      <MenuItem key={option.value} value={option.value}>
-                        {option.label}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                </div>
+                <button style={{ margin:8,width:50, backgroundColor:"gray" }}>
+                    <SaveIcon></SaveIcon>  
+                   
+                  </button>
+               
               </div>
 
               <Typography variant="body1" gutterBottom></Typography>
