@@ -126,9 +126,9 @@ import { motion } from "framer-motion"
 
   obras:{
     [Responsive.breakpoints.up("xs")]: {
-      fontSize: 9,
-      width:90,
-      margin: Responsive.spacing(1),
+      fontSize: 5,
+      marginLeft:9,
+      
     
      },
    [Responsive.breakpoints.up("sm")]: {
@@ -170,6 +170,7 @@ import { motion } from "framer-motion"
 tabs:{
 
   [Responsive.breakpoints.up("xs")]: {
+    marginLeft:-5,
     width: 125,
     height:30,
     
@@ -320,11 +321,11 @@ acerca:{
 //...........BOTON INICIAR SECION.......
 iniciarSecion: {
   [Responsive.breakpoints.up("xs")]: {
-  width: 10,
-  height:25,
-  fontSize: 7,
-  marginLeft:2,
-  marginBottom:1,
+  width: 5,
+  height:20,
+  fontSize: 5,
+  marginLeft:23,
+ 
 
   
   },
@@ -369,9 +370,12 @@ marginLeft:140,
 registrar:{
 
   [Responsive.breakpoints.up("xs")]: {
-    fontSize: 6.5,
+    fontSize: 4,
     width:5,
-    marginLeft:8,
+    marginLeft:35,
+   
+    
+
    },
  [Responsive.breakpoints.up("sm")]: {
   width:70,
@@ -566,7 +570,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
 
 
 
-        <Tab className={classes.acerca} label="ACERCA" />
+        <Tab className={classes.acerca} label="ACERCA" onClick={()=> history.push("/Acerca")} />
       </Tabs>
     </Paper>
 
@@ -592,9 +596,9 @@ const [anchorEl, setAnchorEl] = React.useState(null);
                whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
                
                >
-              <Box>
+              
               <Button className={classes.registrar} variant="outlined" style={{color:"white" }} onClick={()=> history.push("/Registro")}>Registrarse</Button>
-              </Box>
+             
 
               </motion.div>
               </Grid>

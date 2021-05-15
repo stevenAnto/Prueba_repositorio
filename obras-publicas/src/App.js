@@ -6,6 +6,7 @@ import Presupuesto from "./componentes/Modulos/Presupuesto/Presupuesto"
 import Proyecto from "./componentes/Modulos/Proyecto/Proyecto"
 import Registro from "./componentes/Registro/Registro"
 import TablasCostoDirecto from "./componentes/Modulos/Programacion/TablasCostoDirecto"
+import Acerca from "./componentes/Modulos/Acerca/Acerca"
 
 
 import Imagen from "./componentes/Imagen/Imagen"
@@ -29,14 +30,18 @@ const App = () => {
        
        <div className="example-container">
            <Switch>
-        
+            <Route path="/Acerca">
+             <Acerca/>
+            </Route>
          
             <Route  path="/PROGRAMACION">
            <Programacion/>
            
 
            </Route>
-           <Route path="/TablaCostoDirecto">
+
+
+            <Route path="/TablaCostoDirecto">
              <TablasCostoDirecto/>
            </Route>
 

@@ -246,8 +246,8 @@ const Login = () => {
             
             >
             
-              <TextField
-               style={{color:"white"}}
+              <TextField 
+            
                 variant="outlined"
                 required
                 fullWidth
