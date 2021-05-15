@@ -2,10 +2,10 @@
 import * as React from "react";
 import Programacion from "./componentes/Modulos/Programacion/Programacion"
 import Usuario from "./componentes/Modulos/Usuario/Usuario"
-import Presupuesto from "./componentes/Modulos/Presupuesto/Presupuesto"
+
 import Proyecto from "./componentes/Modulos/Proyecto/Proyecto"
 import Registro from "./componentes/Registro/Registro"
-import TablasCostoDirecto from "./componentes/Modulos/Programacion/TablasCostoDirecto"
+
 import Acerca from "./componentes/Modulos/Acerca/Acerca"
 
 
@@ -41,9 +41,6 @@ const App = () => {
            </Route>
 
 
-            <Route path="/TablaCostoDirecto">
-             <TablasCostoDirecto/>
-           </Route>
 
 
 
@@ -73,9 +70,7 @@ const App = () => {
          <Route  path="/PROYECTO">
            <Proyecto/>
          </Route>
-         <Route  path="/PRESUPUESTO">
-           <Presupuesto/>
-         </Route>
+        
          
           <Route  path="/">
            <Imagen/>

@@ -533,13 +533,6 @@ const [anchorEl, setAnchorEl] = React.useState(null);
         </StyledMenuItem>
 
 
-        <StyledMenuItem onClick={()=> history.push("PRESUPUESTO")}>
-          <ListItemIcon>
-            <WorkTwoToneIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="PRESUPUESTO" />
-        </StyledMenuItem>
-
 
       
         <StyledMenuItem onClick={()=> history.push("/PROGRAMACION")}>
@@ -552,19 +545,7 @@ const [anchorEl, setAnchorEl] = React.useState(null);
           </StyledMenuItem>
         
 
-        <StyledMenuItem>
-          <ListItemIcon>
-            <WorkTwoToneIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="AVANCE FISICO" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemIcon>
-            <WorkTwoToneIcon fontSize="small" />
-          </ListItemIcon>
-          <ListItemText primary="AVANCE FINANCIERO" />
-        </StyledMenuItem>
-
+      
 
       </StyledMenu>
 

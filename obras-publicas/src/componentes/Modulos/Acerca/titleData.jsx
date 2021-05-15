@@ -7,7 +7,7 @@ const tileData = [
       featured: true,
     },
     {
-      img: 'https://lh3.googleusercontent.com/proxy/ru5IgTlfzibCVh_v2ZUnZWad9CjfUaGvbv8Xze462SvuoNoVKkELZsukeK7u_PTVNvYnLSrQ3FH5lzmFgz6WOm0i6ip-qj6nFSm6BlOAfKguSXYxkUZ3',
+      img: 'https://www.housebussines.com/imagenes/electricas2.jpg',
       title: 'Trujillo',
       author: 'Alex2021',
     },
