@@ -1,0 +1,151 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #151515;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    
+   background-image: url("home-image.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+
+  }
+  
+  .example-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .next,
+  .prev {
+    
+    position: absolute;
+    background: #0063b1;
+   border:solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 2;
+    
+  }
+  
+  
+  @media only screen and (max-width: 600px){
+    img{
+       width: 250px;
+    
+      }
+
+      .next {
+        right: 43px;
+        transform: scale(1);
+      }
+      
+      .prev {
+        left: 43px;
+        transform: scale(1);
+       
+      }
+}
+
+/*pantallas pequeñas(tablets en modo portai(vertical) y celulares grandes o sea que tienen un ancho mayor a 600px)*/
+@media only screen and (min-width: 600px){
+    img{
+      width: 350px;
+   
+      }
+      .next {
+        right: 80px;
+        transform: scale(1);
+      }
+      
+      .prev {
+        left: 80px;
+        transform: scale(1);
+       
+      }
+}
+
+/*pantallas de tamaño medio(tablerts en modo landscape(horizontal), o sea que teiene un ancho mayor o igual a 768px*/
+@media only screen and (min-width:768px){
+  img{
+    width: 400px;
+ 
+    }
+    .next {
+      right: 170px;
+      transform: scale(1);
+    }
+    
+    .prev {
+      left: 170px;
+      transform: scale(1);
+     
+    }
+}
+/*pantallas grandes(laptop/compu de escritorio o que tiene un ancho mayot a 992px)*/
+@media only screen and (min-width:992px){
+  img{
+    width: 450px;
+ 
+    }
+    .next {
+      right:270px;
+      transform: scale(2);
+    }
+    
+    .prev {
+      left: 270px;
+      transform: scale(2);
+     
+    }
+}
+
+/*pantallas muy grnades(laptos gamer monitores extra grandes, que tienen un ancho  mayor o igual 1200px)*/
+@media only screen and (min-width:1200px){
+  img{
+    width: 550px;
+ 
+    }
+    .next {
+      right: 430px;
+      transform: scale(2);
+    }
+    
+    .prev {
+      left: 430px;
+      transform: scale(2);
+     
+    }
+
+}
+
+
+
+
+  .refresh {
+    padding: 10px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
